@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>Profile | Mausam</title><link rel="stylesheet" href="styles.css"></head>
+<body><div class="app-shell"><header class="topbar"><div class="brand">Your Profile</div></header><main class="page">
+<section class="profile-head card"><div class="avatar">S</div><div><h1>Personalize Mausam</h1><p class="muted">Choose what matters most to you.</p></div></section>
+<section class="card"><div class="section-title-row"><h2>Your interests</h2><button class="small-btn" onclick="saveProfile()">Save</button></div><div class="profile-options">
+<label><input type="checkbox" value="health" checked> ❤️ Health</label><label><input type="checkbox" value="fitness"> 🏃 Fitness</label><label><input type="checkbox" value="travel"> ✈️ Travel</label><label><input type="checkbox" value="family"> 👨‍👩‍👧 Family</label><label><input type="checkbox" value="agriculture"> 🌱 Agriculture</label><label><input type="checkbox" value="commute" checked> 🚗 Commuter</label><label><input type="checkbox" value="beach"> 🏖️ Beach</label><label><input type="checkbox" value="events"> 🎉 Events</label>
+</div></section>
+<section class="card settings"><h2>Preferences</h2><div class="setting"><span>Temperature</span><b>°C</b></div><div class="setting"><span>Notifications</span><input type="checkbox" checked></div><div class="setting"><span>Severe weather alerts</span><input type="checkbox" checked></div></section>
+</main><nav class="bottom-nav"><a href="index.html">⌂<span>Home</span></a><a href="locations.html">⌖<span>Locations</span></a><a href="alerts.html">♢<span>Alerts</span></a><a class="active" href="profile.html">◯<span>Profile</span></a></nav></div>
+<script>function saveProfile(){const selected=[...document.querySelectorAll('.profile-options input:checked')].map(x=>x.value);localStorage.setItem('mausamInterests',JSON.stringify(selected));alert('Preferences saved. Your homepage will prioritize these interests.');}</script></body></html>

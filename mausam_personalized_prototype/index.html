@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mausam | Personalized Weather</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <div>
+        <div class="brand">मौसम <span>MAUSAM</span></div>
+        <button class="location-btn" onclick="openPage('locations.html')">📍 New Delhi, India ▾</button>
+      </div>
+      <button class="icon-btn" onclick="openPage('alerts.html')">🔔<span class="badge">3</span></button>
+    </header>
+
+    <main class="page home-page">
+      <section class="lifestyle-section">
+        <div class="section-heading">
+          <div><span class="eyebrow">PERSONALIZED FOR YOU</span><h1>Your weather, your way.</h1></div>
+        </div>
+        <div class="lifestyle-row" id="lifestyleRow">
+          <button class="life-chip active" data-profile="health">❤️ Health</button>
+          <button class="life-chip" data-profile="fitness">🏃 Fitness</button>
+          <button class="life-chip" data-profile="travel">✈️ Travel</button>
+          <button class="life-chip" data-profile="family">👨‍👩‍👧 Family</button>
+          <button class="life-chip" data-profile="agriculture">🌱 Farm</button>
+          <button class="life-chip" data-profile="commute">🚗 Commute</button>
+          <button class="life-chip" data-profile="beach">🏖️ Beach</button>
+          <button class="life-chip" data-profile="events">🎉 Events</button>
+        </div>
+      </section>
+
+      <section class="hero-weather card">
+        <div class="weather-main">
+          <div>
+            <p class="muted">Sunday, September 6</p>
+            <h2 id="temperature">29°</h2>
+            <p class="condition">Partly Cloudy</p>
+            <p class="muted">Feels like 32° · H 34° / L 26°</p>
+          </div>
+          <div class="weather-art">🌤️</div>
+        </div>
+        <div class="metric-strip">
+          <div><span>💧</span><b>72%</b><small>Humidity</small></div>
+          <div><span>💨</span><b>14 km/h</b><small>Wind</small></div>
+          <div><span>☔</span><b>25%</b><small>Rain</small></div>
+          <div><span>👁️</span><b>6.2 km</b><small>Visibility</small></div>
+        </div>
+      </section>
+
+      <section>
+        <div class="section-title-row"><h2 id="profileTitle">Health Snapshot</h2><span class="live">● LIVE</span></div>
+        <div id="dashboardGrid" class="dashboard-grid"></div>
+      </section>
+
+      <section class="card recommendation" id="recommendation"></section>
+
+      <section>
+        <div class="section-title-row"><h2>Hourly forecast</h2><a href="forecast.html">See all</a></div>
+        <div class="hourly-row">
+          <div class="hour now"><b>Now</b><span>🌤️</span><strong>29°</strong><small>25%</small></div>
+          <div class="hour"><b>2 PM</b><span>☀️</span><strong>31°</strong><small>20%</small></div>
+          <div class="hour"><b>4 PM</b><span>🌦️</span><strong>31°</strong><small>40%</small></div>
+          <div class="hour"><b>6 PM</b><span>🌧️</span><strong>28°</strong><small>65%</small></div>
+          <div class="hour"><b>8 PM</b><span>🌙</span><strong>27°</strong><small>30%</small></div>
+        </div>
+      </section>
+    </main>
+
+    <nav class="bottom-nav">
+      <a class="active" href="index.html">⌂<span>Home</span></a>
+      <a href="locations.html">⌖<span>Locations</span></a>
+      <a href="alerts.html">♢<span>Alerts</span></a>
+      <a href="profile.html">◯<span>Profile</span></a>
+    </nav>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

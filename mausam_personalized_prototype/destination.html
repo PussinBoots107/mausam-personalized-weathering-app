@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>Destination | Mausam</title><link rel="stylesheet" href="styles.css"></head>
+<body><div class="app-shell"><header class="topbar"><button class="back-btn" onclick="history.back()">‹</button><div><div class="brand" id="cityName">Destination</div><div class="muted">Weather outlook</div></div></header><main class="page">
+<section class="hero-weather card"><div class="weather-main"><div><p class="muted">Today</p><h2 id="destTemp">31°</h2><p class="condition" id="destCondition">Light Rain</p></div><div class="weather-art">🌧️</div></div><div class="metric-strip"><div><span>☔</span><b>60%</b><small>Rain</small></div><div><span>💧</span><b>81%</b><small>Humidity</small></div><div><span>💨</span><b>19 km/h</b><small>Wind</small></div></div></section>
+<section class="card"><span class="eyebrow">7-DAY OUTLOOK</span><h2>Rainy week ahead</h2><p>Plan outdoor activities around the lower-rain windows shown in the forecast.</p></section>
+<section class="card recommendation"><h3>Smart packing</h3><p>☔ Umbrella · 🧥 Light waterproof layer · 👟 Water-resistant footwear</p></section>
+</main><nav class="bottom-nav"><a href="index.html">⌂<span>Home</span></a><a href="locations.html">⌖<span>Locations</span></a><a href="alerts.html">♢<span>Alerts</span></a><a href="profile.html">◯<span>Profile</span></a></nav></div>
+<script>
+const params=new URLSearchParams(location.search), city=params.get('city')||'Destination'; document.getElementById('cityName').textContent=city;
+const data={Mumbai:['31°','Light Rain','🌧️'],London:['16°','Rain','🌦️'],Jaipur:['33°','Sunny','☀️']}; if(data[city]){document.getElementById('destTemp').textContent=data[city][0];document.getElementById('destCondition').textContent=data[city][1];document.querySelector('.weather-art').textContent=data[city][2];}
+</script></body></html>
